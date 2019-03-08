@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.main {
+    height: 100vh;
+    width: 100%;
+    background: rgb(235, 225, 225);
+}
+header {
+    background: rgb(49, 87, 168);
+    height: 80px;
+    margin-top: -5px;
+}
+marquee {
+    background: black;
+    color: white;
+    height: 35px;
+    line-height: 35px;
+}
+div.title {
+    border: 5px solid white;
+    width: 170px;
+    height: 70px;
+    margin-left: 100px;
+    line-height: 70px;
+    color: white;
+}
+div.title h1 {
+    font-size: 20px;
+    margin-left: 30px;
+}
+/*                             
+    ******** nav bar*******
+*/
+nav {
+    background: rgb(158, 186, 248);
+    transform: scale(1, 0);
+    transition: 250ms ease-in-out;
+    transform-origin: top;
+    padding: 30px 0px 20px 0px;
+}
+nav ul {
+    color: white;
+    font-size: 22px;
+    margin-left: 20px;
+    list-style: none;
+}
+nav ul li {
+    transform: scale(1, 0);
+}
+nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+input.nav-toggler  {
+    margin-left: 20px;
+    position: absolute;
+    top: 70px;
+    right: 10%;
+    opacity: 0;
+}
+input.nav-toggler:checked ~ nav {
+    transform: scale(1, 1);
+}
+input.nav-toggler:checked ~ nav ul li {
+    transform: scale(1, 1);
+    transition: 250ms ease-in-out;
+}
+label {
+    position: absolute;
+    top: 38px;
+    right: 10%;
+    height: 9%;
+    width: 25px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+label span, label span::before, label span::after {
+    position: relative;
+    height: 3px;
+    width: 25px;
+    z-index: 2;
+    background: rgb(238, 238, 207);
+}
+label span::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+}
+label span::after {
+    content: '';
+    position: absolute;
+    bottom: 7px;
+}
+@media only screen and (min-width: 800px){
+    nav ul li {
+        transform: scale(1, 1);
+        display: inline-block;
+        border: 2px solid white;
+        padding: 4px;
+        width: 120px;
+        height: 25px;
+        
+    }
+    nav {
+        transform: scale(1, 1);
+        text-align: center;
+    }
+    input, label {
+        display: none;
+    }
+}
+
+
+
